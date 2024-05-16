@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  mondr(0,0,w,h,5);
+  mondr(0,0,w,h,4);
 }
 
 function mondr(x,y,wid,ht,iterations){
