@@ -9,19 +9,19 @@ function setup() {
 }
 
 function draw() {
-  mondr(0,0,w,h,2);
+  mondr(0,0,w,h,4);
 }
 
 function mondr(x,y,wid,ht,iterations){
   if (iterations > 0){
     
-    if (random(1) < .5){
-      let r = random(0.20,0.80);
+    if (random(1) < 0.50) {
+      let r = random(0.3,0.50);
       mondr(x,y,wid*r,ht, iterations-1);
       mondr(x+wid*r,y,wid*(1-r),ht, iterations-1);
     }
     else {
-      let r = random(0.20,0.50);
+      let r = random(0.3,0.50);
       mondr(x,y,wid,ht*r, iterations-1);
       mondr(x,y+ht*r,wid, (1-r)*ht,  iterations-1);
     }
@@ -29,7 +29,7 @@ function mondr(x,y,wid,ht,iterations){
   else {
     fill(255);
     let colors = [[245,15,15], [13,127,190], [250,227,23],[0,0,0]];
-    if (random(1) <.6){
+    if (random(1) < 0.56){
       fill(random(colors));
     }
     rect (x,y,wid,ht);
